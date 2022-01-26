@@ -2,6 +2,7 @@ import { Box, Button, Text, TextField, Image } from '@skynexui/components';
 import { useRouter } from 'next/router';
 import React from 'react';
 import appConfig from '../config.json'
+import background from './img/tokyo.jpg'
 
 
 
@@ -16,6 +17,7 @@ function Title (props) {
         color: ${appConfig.theme.colors.neutrals['000']};
         font-size: 40px;
         font-weight: 600;
+        margin-bottom: 20px;
 
     }
     
@@ -51,9 +53,8 @@ export default function PaginaInicial() {
     
       <Box
         styleSheet={{
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          backgroundColor: appConfig.theme.colors.primary[500],
-          backgroundImage: 'url(https://images.unsplash.com/photo-1592159736089-a6692f69a781?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1238&q=80)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',        
+          backgroundImage: `url(https://images.unsplash.com/photo-1534214526114-0ea4d47b04f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)`,
           backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundBlendMode: 'multiply',
         }}
       >
@@ -67,9 +68,9 @@ export default function PaginaInicial() {
               sm: 'row',
             },
             width: '100%', maxWidth: '700px',
-            borderRadius: '5px', padding: '32px', margin: '16px',
-            boxShadow: '0 2px 10px 0 rgb(0 0 0 / 20%)',
-            backgroundColor: appConfig.theme.colors.neutrals[700],
+            borderRadius: '10px', padding: '32px', margin: '16px',
+            boxShadow: '0 10px 10px 0 rgb(0 0 0 / 100%)',
+            backgroundColor: appConfig.theme.colors.neutrals[600],
           }}
         >
           {/* Formulário */}
@@ -85,9 +86,7 @@ export default function PaginaInicial() {
             }}
           >
             <Title tag="h2">Welcome back!</Title>
-            <Text variant="body3" styleSheet={{ marsginBottom: '32px', color: appConfig.theme.colors.neutrals[300]}}>
-              {appConfig.name}
-            </Text>
+            
 
 
             {/* <input 
@@ -125,6 +124,11 @@ export default function PaginaInicial() {
                 mainColorLight: appConfig.theme.colors.primary[400],
                 mainColorStrong: appConfig.theme.colors.primary[600],
                 
+                
+              }}
+
+              styleSheet={{ 
+                marginTop: '10px'
               }}
             />
           </Box>
@@ -158,7 +162,7 @@ export default function PaginaInicial() {
               variant="body4"
               styleSheet={{
                 color: appConfig.theme.colors.neutrals[200],
-                backgroundColor: appConfig.theme.colors.neutrals[900],
+                backgroundColor: appConfig.theme.colors.neutrals[800],
                 padding: '3px 10px',
                 borderRadius: '1000px'
               }}
